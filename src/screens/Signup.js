@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 export default function Signup() {
   const [credentials, setCredentials] = useState({
@@ -126,7 +126,7 @@ export default function Signup() {
               type="text"
               className="form-control"
               name="geolocation"
-              placeholder='"Click below for fetching address"'
+              // placeholder='"Click below for fetching address"'
               value={credentials.geolocation}
               onChange={onChange}
               // onChange={(e) => setAddress(e.target.value)}

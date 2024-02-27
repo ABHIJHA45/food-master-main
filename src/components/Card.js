@@ -22,6 +22,7 @@ export default function Card(props) {
       }
     }
 
+    // eslint-disable-next-line eqeqeq
     if (food != []) {
       if (food.size === size) {
         await dispatch({
