@@ -19,7 +19,7 @@ export default function Navbar() {
         <div className="container-fluid">
           <Link
             className="navbar-brand fs-2 text-light text-bold fw-bold "
-            to="/food-master"
+            to="/"
           >
             FOODIE
           </Link>
@@ -40,7 +40,7 @@ export default function Navbar() {
                 <Link
                   className="nav-link  active fs-5"
                   aria-current="page"
-                  to="/food-master"
+                  to="/"
                 >
                   Home
                 </Link>
