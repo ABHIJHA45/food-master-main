@@ -8,8 +8,8 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const response = await fetch("http://localhost:5000/api/login", {
-      //       // credentials: 'include',
-      //       // Origin:"http://localhost:3000/login",
+      // credentials: "include",
+      // Origin: "http://localhost:3000/login",
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -28,7 +28,7 @@ export default function Login() {
       //save the auth toke to local storage and redirect
       localStorage.setItem("userEmail", credentials.email);
       localStorage.setItem("token", json.authToken);
-      navigate("/foodie");
+      navigate("/food-master");
       //     } else {
       //       alert("Enter Valid Credentials");
     }
