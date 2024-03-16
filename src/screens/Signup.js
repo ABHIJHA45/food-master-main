@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import { useNavigate } from "react-router-dom";
 export default function Signup() {
   const [credentials, setCredentials] = useState({
     name: "",
@@ -9,7 +10,7 @@ export default function Signup() {
     geolocation: "",
   });
   //   let [address, setAddress] = useState("");
-  //   let navigate = useNavigate();
+    let navigate = useNavigate();
 
   //   const handleClick = async (e) => {
   //     e.preventDefault();
@@ -60,13 +61,13 @@ export default function Signup() {
     if (!json.success) {
       alert("Enter Valid Credentials");
     }
-    // if (json.success) {
-    //save the auth toke to local storage and redirect
-    //       localStorage.setItem("token", json.authToken);
-    //       navigate("/login");
-    //     } else {
-    //       alert("Enter Valid Credentials");
-    // }
+    if (json.success) {
+    save the auth toke to local storage and redirect
+          localStorage.setItem("token", json.authToken);
+          navigate("/login");
+        } else {
+          alert("Enter Valid Credentials");
+    }
   };
 
   const onChange = (e) => {
